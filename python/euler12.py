@@ -4,23 +4,45 @@
 #
 # problem 12
 #
-# Brute force solution ;)
 
-n = 1
-m = 1
-high = 0
-z = 0
+import pyprimes
 
-while z < 500:
-    n = (n + m) + 1
-    m = m + 1
-    z = 0
+n=199
+Dn=2
+cnt=0
+x = pyprimes.primes()
+p = 1000
+primes = list(next(x) for i in range(p))
 
-    for i in range(1, n):
-        if n % i == 0:
-            z = z + 1
-            i = i + 1
-            if z > high:
-                high = z
-                print n
-print n
+while cnt < 500:
+
+    n = n+1
+    n1 = n
+
+    if n1 % 2 == 0:
+        n1 = n1 / 2
+
+    Dn1 = 1
+
+    for i in range(p):
+        if primes[i] * primes[i] > n1:
+            Dn1 = Dn1 * 2
+            break
+
+        exp=1
+        while n1 % primes[i] == 0:
+            exp = exp + 1
+            n1 = n1 / primes[i]
+
+        if exp > 1:
+            Dn1 = Dn1 * exp
+
+        if n1 == 1:
+            break
+
+    cnt = Dn * Dn1
+    Dn = Dn1
+
+ans = n * (n-1) / 2
+
+print ans
