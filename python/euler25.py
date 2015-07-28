@@ -11,7 +11,7 @@ def fib(n):
   a,b = b,a+b
  return a
 
-for i in range(4781, 10000):
+for i in range(10000):
     x = fib(i)
     if len(str(x)) == 1000:
         print(i)
