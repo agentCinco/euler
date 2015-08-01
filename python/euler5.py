@@ -11,13 +11,14 @@
 import pyprimes
 
 limit = 20
+p = []
 y = []
 
-for i in range(20):
+for i in range(limit):
   if pyprimes.isprime(i):
     p.append(i)
 
-for i in x:
+for i in p:
 	y.append(i)
 	z = i * i
 	if z < limit:

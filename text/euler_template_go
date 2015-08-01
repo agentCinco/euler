@@ -1,0 +1,13 @@
+//
+// projecteuler.net
+//
+// problem
+//
+
+package main
+
+import "fmt"
+
+func main() {
+
+}
