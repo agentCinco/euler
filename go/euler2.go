@@ -19,8 +19,8 @@ func fib() func() int {
 }
 
 func main() {
-	sum := 0
 	f := fib()
+	sum := 0
 
 	for {
 
