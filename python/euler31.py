@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # projecteuler.net
 #
-# problem 30
+# problem 31
 #
 
 tot = 200
