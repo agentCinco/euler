@@ -1,7 +1,7 @@
 //
 // projecteuler.net
 //
-// problem
+// problem 2
 //
 
 package main
