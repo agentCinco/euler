@@ -1,0 +1,11 @@
+[package]
+name = "euler10"
+version = "0.1.0"
+authors = ["Ty Auvil <ty.auvil@gmail.com>"]
+
+[dependencies]
+primal = "*"
+
+[[bin]]
+name = "euler10"
+path = "euler10.rs"
