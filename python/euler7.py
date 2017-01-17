@@ -10,4 +10,4 @@ import pyprimes
 
 x = pyprimes.nth_prime(10001)
 
-print x
+print(x)

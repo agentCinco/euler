@@ -13,4 +13,4 @@ for i in range(1, x):
 y = sum(range(1,x))
 z = y**2
 
-print z - a
+print(z - a)
