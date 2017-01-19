@@ -16,4 +16,4 @@ for i in range(grid):
     paths *= (2 * grid) - i
     paths /= i + 1
 
-print paths
+print(paths)

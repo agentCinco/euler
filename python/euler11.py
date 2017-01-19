@@ -65,4 +65,4 @@ for i in xrange(0, 320, 20):
 		if x > y:
 			y = x
 
-print y
+print(y)

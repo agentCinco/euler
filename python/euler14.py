@@ -39,4 +39,4 @@ for i in range(77031, 999999):
 
     result = 0
 
-print highnum
+print(highnum)

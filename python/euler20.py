@@ -13,4 +13,4 @@ x = 0
 for i in str(n):
     x += int(i)
 
-print x
+print(x)

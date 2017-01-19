@@ -45,4 +45,4 @@ while cnt < 500:
 
 ans = n * (n-1) / 2
 
-print ans
+print(ans)
