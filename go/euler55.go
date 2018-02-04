@@ -46,7 +46,7 @@ func reverse_str(s string) string {
 }
 
 func reverse_big_int(n *big.Int) *big.Int {
-    s := n.String()
+	s := n.String()
 	r := reverse_str(s)
 	x := new(big.Int)
 	z, _ := x.SetString(r, 10)
