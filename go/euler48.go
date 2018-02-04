@@ -1,7 +1,7 @@
 //
 // projecteuler.net
 //
-// problem 31
+// problem 48
 //
 
 package main
