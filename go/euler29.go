@@ -8,41 +8,33 @@ package main
 
 import (
 	"fmt"
-	"math"
+	"math/big"
 )
 
-func set(s []int) []int {
-	if len(s) == 0 {
-		return s
-	}
-	seen := make([]int, 0, len(s))
-slice:
-	for i, n := range s {
-		if i == 0 {
-			s = s[:0]
+func unique(Slice []string) []string {
+	keys := make(map[string]bool)
+	list := []string{}
+	for _, entry := range Slice {
+		if _, value := keys[entry]; !value {
+			keys[entry] = true
+			list = append(list, entry)
 		}
-		for _, t := range seen {
-			if n == t {
-				continue slice
-			}
-		}
-		seen = append(seen, n)
-		s = append(s, n)
 	}
-	return s
+	return list
 }
 
 func main() {
-	a := []int{}
-	answer := 0
+	a := make([]string, 0)
 
-	for i := 2.0; i < 101.0; i++ {
-		for j := 2.0; j < 101.0; j++ {
-			a = append(a, int(math.Pow(i, j)))
+	for i := int64(2); i < 101; i++ {
+		for j := int64(2); j < 101; j++ {
+			x := big.NewInt(i)
+			y := big.NewInt(j)
+			z := big.NewInt(0)
+			z = z.Exp(x, y, z)
+			a = append(a, z.String())
 		}
 	}
-
-	answer = len(set(a))
-	fmt.Printf("%v\n", a)
-	fmt.Printf("%v\n", answer)
+	a = unique(a)
+	fmt.Printf("%v\n", len(a))
 }
