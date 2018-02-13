@@ -25,5 +25,5 @@ for i in p:
 		while z < limit:
 			z = z * i
 			y.append(i)
-
-print reduce(lambda a, b: a*b, y)
+print(y)
+print(reduce(lambda a, b: a*b, y))
