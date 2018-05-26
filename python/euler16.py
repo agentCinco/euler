@@ -8,7 +8,7 @@
 #
 # What is the sum of the digits of the number 21000?
 
-n = 2**1000
+n = 2 ** 1000
 x = 0
 
 for i in str(n):

@@ -8,9 +8,9 @@ x = 101
 a = 0
 
 for i in range(1, x):
-	a += i**2
+    a += i ** 2
 
-y = sum(range(1,x))
-z = y**2
+y = sum(range(1, x))
+z = y ** 2
 
 print(z - a)

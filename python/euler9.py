@@ -1,7 +1,7 @@
 #! /usr/bin/env python
 # -*- coding: utf-8 -*-
 # projecteuler.net
-# 
+#
 # problem 9
 #
 # A Pythagorean triplet is a set of three natural numbers, a < b < c, for which,
@@ -13,9 +13,9 @@
 # Find the product abc.
 
 for a in range(1, 499):
-	for b in range(1, 499):
-		for c in range(1, 499):
-			if (a + b + c) == 1000:
-				if (a**2 + b**2) == c**2:
-					print(a * b * c)
-					exit() 
+    for b in range(1, 499):
+        for c in range(1, 499):
+            if (a + b + c) == 1000:
+                if (a ** 2 + b ** 2) == c ** 2:
+                    print(a * b * c)
+                    exit()

@@ -14,10 +14,10 @@ p = set(primes(751000))
 for a in range(-999, 0, 2):
     for b in range(-a, 1000, 2):
         n = 1
-        while (n*(n+a) + b) in p:
+        while (n * (n + a) + b) in p:
             n += 1
         if n > s:
             s = n
             c = (a, b)
 
-print(c[0]*c[1])
+print(c[0] * c[1])

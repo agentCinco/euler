@@ -7,16 +7,16 @@
 
 import pyprimes
 
-n=199
-Dn=2
-cnt=0
+n = 199
+Dn = 2
+cnt = 0
 x = pyprimes.primes()
 p = 1000
 primes = list(next(x) for i in range(p))
 
 while cnt < 500:
 
-    n = n+1
+    n = n + 1
     n1 = n
 
     if n1 % 2 == 0:
@@ -29,7 +29,7 @@ while cnt < 500:
             Dn1 = Dn1 * 2
             break
 
-        exp=1
+        exp = 1
         while n1 % primes[i] == 0:
             exp = exp + 1
             n1 = n1 / primes[i]
@@ -43,6 +43,6 @@ while cnt < 500:
     cnt = Dn * Dn1
     Dn = Dn1
 
-ans = n * (n-1) / 2
+ans = n * (n - 1) / 2
 
 print(ans)

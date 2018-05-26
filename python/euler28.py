@@ -6,7 +6,7 @@
 #
 
 a = []
-b,c = 1,0
+b, c = 1, 0
 
 for i in range(500):
     c += 2

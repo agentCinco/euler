@@ -15,15 +15,15 @@ p = []
 y = []
 
 for i in range(limit):
-  if pyprimes.isprime(i):
-    p.append(i)
+    if pyprimes.isprime(i):
+        p.append(i)
 
 for i in p:
-	y.append(i)
-	z = i * i
-	if z < limit:
-		while z < limit:
-			z = z * i
-			y.append(i)
+    y.append(i)
+    z = i * i
+    if z < limit:
+        while z < limit:
+            z = z * i
+            y.append(i)
 print(y)
-print(reduce(lambda a, b: a*b, y))
+print(reduce(lambda a, b: a * b, y))
