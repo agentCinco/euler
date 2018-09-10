@@ -24,8 +24,8 @@ func main() {
 		t := 0
 		mlimit := int(math.Sqrt(float64(s / 2)))
 		for m := 2; m <= mlimit; m++ {
-			if (s/2)%m == 0 { 
-				if m%2 == 0 { 
+			if (s/2)%m == 0 {
+				if m%2 == 0 {
 					k = m + 1
 				} else {
 					k = m + 2

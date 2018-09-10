@@ -24,7 +24,7 @@ func main() {
 	}
 	s = append(s, 25)
 	s = append(s, 50)
-	d = append(d, 25 * 2)
+	d = append(d, 25*2)
 
 	for _, v := range d {
 		if v < l {

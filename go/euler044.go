@@ -21,7 +21,7 @@ func isPent(n float64) bool {
 func main() {
 	answer := 0
 
-	for i := 1;; i++ {
+	for i := 1; ; i++ {
 		n := i * (3*i - 1) / 2
 		for j := i - 1; j > 0; j-- {
 			m := j * (3*j - 1) / 2

@@ -6,7 +6,23 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sync"
+)
+
+func searchBlock(a []int, b, c, d, e, f int) int {
+	r := 0
+	for i := 0; i < b; i += 20 {
+		for j := 0; j < c; j++ {
+			x := a[i+j] * a[i+j+d] * a[i+j+e] * a[i+j+f]
+			if x > r {
+				r = x
+			}
+		}
+	}
+	return r
+}
 
 func main() {
 	a := []int{8, 2, 22, 97, 38, 15, 0, 40, 0, 75, 4, 5, 7, 78, 52, 12, 50,
@@ -35,46 +51,31 @@ func main() {
 		48, 61, 43, 52, 1, 89, 19, 67, 48}
 
 	answer := 0
-	// horizontal search
+	n := make(chan int, 4)
+	var wg sync.WaitGroup
 
-	for i := 0; i < 380; i += 20 {
-		for j := 0; j < 16; j++ {
-			x := a[i+j] * a[i+j+1] * a[i+j+2] * a[i+j+3]
-			if x > answer {
-				answer = x
-			}
-		}
-	}
-
-	// vertical search
-
-	for i := 0; i < 320; i += 20 {
-		for j := 0; j < 19; j++ {
-			x := a[i+j] * a[i+j+20] * a[i+j+40] * a[i+j+60]
-			if x > answer {
-				answer = x
-			}
-		}
-	}
-
-	// diagonal top left to bottom right
-
-	for i := 0; i < 320; i += 20 {
-		for j := 0; j < 16; j++ {
-			x := a[i+j] * a[i+j+21] * a[i+j+42] * a[i+j+63]
-			if x > answer {
-				answer = x
-			}
-		}
-	}
-	// diagonal top right to bottom left
-
-	for i := 0; i < 320; i += 20 {
-		for j := 0; j < 16; j++ {
-			x := a[i+j] * a[i+j+19] * a[i+j+38] * a[i+j+57]
-			if x > answer {
-				answer = x
-			}
+	wg.Add(4)
+	go func() {
+		n <- searchBlock(a, 380, 16, 1, 2, 3)
+		wg.Done()
+	}()
+	go func() {
+		n <- searchBlock(a, 320, 19, 20, 40, 60)
+		wg.Done()
+	}()
+	go func() {
+		n <- searchBlock(a, 320, 16, 21, 42, 63)
+		wg.Done()
+	}()
+	go func() {
+		n <- searchBlock(a, 320, 16, 19, 38, 57)
+		wg.Done()
+	}()
+	wg.Wait()
+	close(n)
+	for i := range n {
+		if i > answer {
+			answer = i
 		}
 	}
 	fmt.Printf("%v\n", answer)

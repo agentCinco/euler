@@ -9,9 +9,9 @@ package main
 import (
 	"fmt"
 	"math/big"
+	"sort"
 	"strconv"
 	"strings"
-	"sort"
 )
 
 func pandigital(n int) bool {
@@ -26,7 +26,7 @@ func pandigital(n int) bool {
 
 func main() {
 	answer := 0
-	for i := 7654321; i > 1234567; i-=2 {
+	for i := 7654321; i > 1234567; i -= 2 {
 		if big.NewInt(int64(i)).ProbablyPrime(1) {
 			if pandigital(i) {
 				answer = i
