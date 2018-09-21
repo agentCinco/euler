@@ -20,36 +20,31 @@ $b = @()
 $r = 0
 $p = 0
 
-function powers
-{
-param($arg)
+function powers {
+    param($arg)
 
-$arg = $arg.toString()
-$x=0
-    for($i=0;$i-le$arg.length-1;$i++)
-    {
-    $x += [math]::pow(($arg[$i]-48),5)
+    $arg = $arg.toString()
+    $x = 0
+    for ($i = 0; $i -le $arg.length - 1; $i++) {
+        $x += [math]::pow(($arg[$i] - 48), 5)
     }
     
-    if($arg-eq$x)
-    {
-    return $arg
+    if ($arg -eq $x) {
+        return $arg
     }
-    else{return $null}
+    else {return $null}
 }
 
 
 
-for($i=194000;$i-le$a;$i++)
-{
-$i
-$b += powers $i
+for ($i = 194000; $i -le $a; $i++) {
+    $i
+    $b += powers $i
 }
 
-foreach($z in $b)
-{
+foreach ($z in $b) {
 
-$r += $z
+    $r += $z
 
 }
 

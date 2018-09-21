@@ -16,16 +16,14 @@ Find the difference between the sum of the squares of the first one hundred natu
 $twenty = 0
 $forty = 0
 
-for($i=1;$i -le 20;$i++)
-{
-$twenty += $i*$i
-$i
+for ($i = 1; $i -le 20; $i++) {
+    $twenty += $i * $i
+    $i
 }
 
-for($i=1;$i -le 40;$i++)
-{
-$forty += $i*$i
-$i
+for ($i = 1; $i -le 40; $i++) {
+    $forty += $i * $i
+    $i
 }
 
 $win = $forty / $twenty

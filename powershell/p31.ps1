@@ -19,20 +19,13 @@ $20p
 $50p
 $100p
 
-for()#100p
-{
-    for()#50p
-    {
-        for()#20p
-        {
-            for()#10p
-            {
-                for()#5p
-                {
-                    for()#2p
-                    {
-                        for()#1p
-                        {
+for () { #100p
+    for () { #50p
+        for () { #20p
+            for () { #10p
+                for () { #5p
+                    for () { #2p
+                        for () { #1p
                         
                         }
                     }

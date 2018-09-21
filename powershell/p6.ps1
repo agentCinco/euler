@@ -18,12 +18,11 @@ $sqr = 0
 $sum = 0
 
 
-for($i=1;$i -le $num;$i++)
-{
-$sqr += $i*$i
-$sum += $i
+for ($i = 1; $i -le $num; $i++) {
+    $sqr += $i * $i
+    $sum += $i
 }
 
-$result = ($sum*$sum) - $sqr
+$result = ($sum * $sum) - $sqr
 
 Write-Host "Result is: $result"

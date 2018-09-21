@@ -208,10 +208,9 @@ $a = $a.split("`n")
 $z = 0
 [double]$p = 0
 
-foreach($i in $a)
-{
-$p = $p += [double]$a[$z]
-$z++
+foreach ($i in $a) {
+    $p = $p += [double]$a[$z]
+    $z++
 }
 
 $p

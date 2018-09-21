@@ -20,24 +20,21 @@ $b = 1 #current high number
 $c = 2 #interval
 $y = 0
 
-$a+=$b
+$a += $b
 
-for($i=1;$i-le500;$i++)
-{
+for ($i = 1; $i -le 500; $i++) {
 
-  for($z=1;$z-le4;$z++)
-  {
-  $b
-  $b+=$c
-  $a+=$b
-  }
+    for ($z = 1; $z -le 4; $z++) {
+        $b
+        $b += $c
+        $a += $b
+    }
 
-$c+=2
+    $c += 2
 }
 
-foreach($x in $a)
-{
-$y += $x
+foreach ($x in $a) {
+    $y += $x
 }
 
 $y

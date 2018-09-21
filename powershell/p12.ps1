@@ -24,20 +24,19 @@ What is the value of the first triangle number to have over five hundred divisor
 $n = 1
 $m = 1
 $high = 0
-$z=0
-do
-{
-$n = ($n + $m) + 1
-$m++
-$z=0
+$z = 0
 
-  for($i=1;$i-le$n;$i++)
-  { 
-    if($n%$i-eq0){$z++}
-  }
+do {
+    $n = ($n + $m) + 1
+    $m++
+    $z = 0
 
-if($z-gt$high){$high=$z;write-host "New High Score: $high from $n"}
+    for ($i = 1; $i -le $n; $i++) { 
+        if ($n % $i -eq 0) {$z++}
+    }
+
+    if ($z -gt $high) {$high = $z; write-host "New High Score: $high from $n"}
 
 }
 
-until($z-ge500)
+until($z -ge 500)

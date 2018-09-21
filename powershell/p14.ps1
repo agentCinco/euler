@@ -25,20 +25,18 @@ $result = 1
 $high = 0
 $highnum = 0
 
-for($i=77031;$i -le 999999;$i++)
-{
-  $num = $i
+for ($i = 77031; $i -le 999999; $i++) {
+    $num = $i
   
-  do
-  {
-  if($num%2 -eq 0){$num=$num/2;$result++}
-  else{$num=(($num*3)+1);$result++}
-  #$num
-  }
-  until($num -eq 1)
+    do {
+        if ($num % 2 -eq 0) {$num = $num / 2; $result++}
+        else {$num = (($num * 3) + 1); $result++}
+        #$num
+    }
+    until($num -eq 1)
   
-  if($result -gt $high){$high = $result;$highnum = $i}
-  $result=0
+    if ($result -gt $high) {$high = $result; $highnum = $i}
+    $result = 0
 }
 
 $high

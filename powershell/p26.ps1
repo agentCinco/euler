@@ -5,9 +5,8 @@
 
 $arr = @()
 
-foreach($i in 2..1000)
-{
-  [double]$arr += 1/$i
+foreach ($i in 2..1000) {
+    [double]$arr += 1 / $i
 }
 
 $arr | sort length
