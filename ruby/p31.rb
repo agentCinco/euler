@@ -20,23 +20,23 @@ g = 1
 total = 1
 
 0.upto(2) do |i|
-    0.upto(4) do |j|
-        0.upto(10) do |k|
-            0.upto(20) do |l|
-                0.upto(40) do |m|
-                    0.upto(100) do |n|
-                        0.upto(200) do |o|
-                            x = ((a * i) + (b * j) + (c * k) + (d * l) + (e * m) + (f * n) + (g * o))
-                            if x == 200
-                                total += 1
-                                puts total
-                            end
-                        end
-                    end
-                end
+  0.upto(4) do |j|
+    0.upto(10) do |k|
+      0.upto(20) do |l|
+        0.upto(40) do |m|
+          0.upto(100) do |n|
+            0.upto(200) do |o|
+              x = ((a * i) + (b * j) + (c * k) + (d * l) + (e * m) + (f * n) + (g * o))
+              if x == 200
+                total += 1
+                puts total
+              end
             end
+          end
         end
+      end
     end
+  end
 end
 
 puts total

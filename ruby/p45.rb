@@ -10,23 +10,15 @@
 # Find the next triangle number that is also pentagonal and hexagonal.
 
 def tri(n)
-
-    (n*(n + 1))/2
-
+  (n * (n + 1)) / 2
 end
-
 
 def pent(n)
-
-    (n*(3*n -1))/2
-
+  (n * (3 * n - 1)) / 2
 end
 
-
 def hex(n)
-
-    n* (2*n -1)
-
+  n * (2 * n - 1)
 end
 
 tri_list = []
@@ -35,27 +27,20 @@ hex_list = []
 p = 100000
 
 50000.upto(p) do |x|
-
-    tri_list << tri(x)
-    
+  tri_list << tri(x)
 end
 
-30000.upto(p/2) do |x|
-
-    pent_list << pent(x)
-    
+30000.upto(p / 2) do |x|
+  pent_list << pent(x)
 end
 
-20000.upto(p/2) do |x|
-
-    hex_list << hex(x)
-    
+20000.upto(p / 2) do |x|
+  hex_list << hex(x)
 end
 
 tri_list.each do |x|
-    if hex_list.include?(x) and pent_list.include?(x)
-        puts "A WINNNER IS YOU?!"
-        puts x
-    end
+  if hex_list.include?(x) and pent_list.include?(x)
+    puts "A WINNNER IS YOU?!"
+    puts x
+  end
 end
-

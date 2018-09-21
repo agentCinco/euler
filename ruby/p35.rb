@@ -7,10 +7,10 @@
 #
 #How many circular primes are there below one million?
 
-require 'mathn'
+require "mathn"
 
-a=[]
-clean=[2,5]
+a = []
+clean = [2, 5]
 
 Prime.each() do |prime|
   if prime < 1000000
@@ -20,54 +20,46 @@ Prime.each() do |prime|
   end
 end
 
-nums = [2,4,5,6,8,0]
+nums = [2, 4, 5, 6, 8, 0]
 
 a.each do |x|
-
   if x.to_s.include?(2.to_s) or x.to_s.include?(4.to_s) or x.to_s.include?(5.to_s) or x.to_s.include?(6.to_s) or x.to_s.include?(8.to_s) or x.to_s.include?(0.to_s)
   else
     clean << x
   end
-
 end
 
 a = clean
 
-clean = [2,5]
+clean = [2, 5]
 
-def circle(arg1,arg2,arg3)
+def circle(arg1, arg2, arg3)
+  tmpstr = ""
+  tmparr = []
 
-tmpstr = ""
-tmparr = []
+  tmparr = arg1.to_s.split(//)
 
-tmparr = arg1.to_s.split(//)
+  if tmparr.length > 1
+    1.upto(tmparr.length - 1) do
+      tmpstr = tmparr.pop
+      tmparr.reverse!
+      tmparr << tmpstr
+      tmparr.reverse!
 
-if tmparr.length > 1
-
-  1.upto(tmparr.length-1) do
-
-  tmpstr = tmparr.pop
-  tmparr.reverse!
-  tmparr << tmpstr
-  tmparr.reverse!
-  
-    if arg2.include?(tmparr.join.to_i)
-	puts tmparr.join
-    else
-      return false;
+      if arg2.include?(tmparr.join.to_i)
+        puts tmparr.join
+      else
+        return false
+      end
     end
-
+  else
+    arg3 << tmparr.join.to_i
   end
-else
-arg3 << tmparr.join.to_i
-end
-arg3 << tmparr.join.to_i
+  arg3 << tmparr.join.to_i
 end
 
 a.each do |x|
-
-circle(x,a,clean)
-
+  circle(x, a, clean)
 end
 
 clean.uniq!

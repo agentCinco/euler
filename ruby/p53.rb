@@ -7,7 +7,7 @@ def fact(n)
   if n == 0
     1
   else
-    n * fact(n-1)
+    n * fact(n - 1)
   end
 end
 
@@ -20,18 +20,15 @@ end
 x = 0
 
 23.upto(100) do |n|
-
   1.upto(100) do |r|
     a = factorial[n]
-	b = factorial[r]
-	c = factorial[n-r]
-	
-	if a / (b * c) > 999999
-	  x += 1
-	end	   
-  end	
-   
-end
+    b = factorial[r]
+    c = factorial[n - r]
 
+    if a / (b * c) > 999999
+      x += 1
+    end
+  end
+end
 
 puts "Win! #{x}"

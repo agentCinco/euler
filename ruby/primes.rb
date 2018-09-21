@@ -1,23 +1,21 @@
 #prime number benchmark
 
-require 'mathn'
+require "mathn"
 
 def is_prime(n)
-("1" * n) !~ /^1?$|^(11+?)\1+$/
+  ("1" * n) !~ /^1?$|^(11+?)\1+$/
 end
 
 a = []
 
 sleep 10
 
-a  = Time.now
+a = Time.now
 
 10.times do
-
-1.upto 1_000 do |x|
-is_prime(x)
-end
-
+  1.upto 1_000 do |x|
+    is_prime(x)
+  end
 end
 
 b = Time.now
@@ -30,22 +28,18 @@ b = Time.now
 
 # a.each do |x|
 # if Prime.prime?(x) == false
-    # puts "EPIC FAIL"
+# puts "EPIC FAIL"
 # end
 # end
-
-
 
 sleep 10
 
-c  = Time.now
+c = Time.now
 
 10.times do
-
-1.upto 1_000 do |x|
-Prime.prime?(x)
-end
-
+  1.upto 1_000 do |x|
+    Prime.prime?(x)
+  end
 end
 
 d = Time.now

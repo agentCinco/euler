@@ -35,16 +35,15 @@ x = 0
 y = 0
 
 1.upto 4 do |i|
-
-1.upto 6 do |j|
-
-if i > j
-x += 1
+  1.upto 6 do |j|
+    if i > j
+      x += 1
+    end
+    y += 1
+  end
 end
-y += 1
 
-
-end
-end
+puts x
+puts y
 
 puts x.to_f / y

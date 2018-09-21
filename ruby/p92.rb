@@ -8,31 +8,27 @@ a = Time.now
 sum = 0
 
 def chain(n)
+  x = 0
 
-x = 0
-    
-for i in 0..((n.to_s.length.to_i) -1)
-    x += (n.to_s[i].to_i)**2
-end
-    
-n = x
-   
-if n == 1
+  for i in 0..((n.to_s.length.to_i) - 1)
+    x += (n.to_s[i].to_i) ** 2
+  end
+
+  n = x
+
+  if n == 1
     return false
-elsif n == 89
+  elsif n == 89
     return true
-else
+  else
     chain(n)
-end
-
+  end
 end
 
 1.upto 10_000_000 do |i|
-
-if chain(i) == true
+  if chain(i) == true
     sum += 1
-end
-
+  end
 end
 
 b = Time.now

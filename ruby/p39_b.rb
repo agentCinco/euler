@@ -13,14 +13,14 @@
 # right_triangles = Hash.new(0)
 
 # 1.upto(500) { |a|
-  # (a+1).upto(500) { |b|
-    # (b+1).upto(500) { |c|
-      # break if (a + b + c > 1000)
-      # if ((a**2 + b**2) == c**2)
-        # right_triangles[a + b + c] += 1
-      # end
-    # }
-  # }
+# (a+1).upto(500) { |b|
+# (b+1).upto(500) { |c|
+# break if (a + b + c > 1000)
+# if ((a**2 + b**2) == c**2)
+# right_triangles[a + b + c] += 1
+# end
+# }
+# }
 # }
 
 # Return max based on key [1000, 1]
@@ -41,10 +41,10 @@ timer_start = Time.now
 right_triangles = []
 
 1.upto(500) { |a|
-  (a+1).upto(500) { |b|
-    (b+1).upto(500) { |c|
+  (a + 1).upto(500) { |b|
+    (b + 1).upto(500) { |c|
       break if (a + b + c > 1000)
-      if ((a**2 + b**2) == c**2)
+      if ((a ** 2 + b ** 2) == c ** 2)
         right_triangles << a + b + c
       end
     }
@@ -60,5 +60,5 @@ end
 
 puts most_common_value(right_triangles)
 
-puts "Elapsed Time: #{(Time.now - timer_start)*1000} milliseconds"
+puts "Elapsed Time: #{(Time.now - timer_start) * 1000} milliseconds"
 # Elapsed Time: 7463.427 milliseconds

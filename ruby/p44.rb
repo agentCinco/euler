@@ -10,32 +10,28 @@
 # Find the next triangle number that is also pentagonal and hexagonal.
 
 def pent(n)
-
-    (n*(3*n -1))/2
-
+  (n * (3 * n - 1)) / 2
 end
 
 pent_list = []
 
 1000.upto(4000) do |x|
-
-    pent_list << pent(x)
-    
+  pent_list << pent(x)
 end
 
 pent_list.each do |x|
-pent_list.each do |y|
+  pent_list.each do |y|
     if y < x
-        c = x + y
-        d = x - y
+      c = x + y
+      d = x - y
     else
-        break
+      break
     end
     puts x
-        if pent_list.include?(d) and pent_list.include?(c)
-            puts "WININEINEINER"
-            puts d
-            return d
-        end
-end
+    if pent_list.include?(d) and pent_list.include?(c)
+      puts "WININEINEINER"
+      puts d
+      return d
+    end
+  end
 end

@@ -1,7 +1,7 @@
 #euler
 #179
 
-require 'prime'
+require "prime"
 high = 0
 total = 0
 
@@ -19,20 +19,18 @@ end
 
 y = (1).divisor_count
 
-1.upto (10**7) do |x|
-  
-  z = (x+1).divisor_count
-  
+1.upto (10 ** 7) do |x|
+  z = (x + 1).divisor_count
+
   if y == z
     total += 1
   end
-  
+
   y = z
-  
+
   if x % 100 == 0
-   puts x
+    puts x
   end
-  
 end
 
 puts total

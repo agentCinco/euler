@@ -6,7 +6,7 @@ hand = []
 file = File.new("poker.txt", "r")
 
 while (line = file.gets)
-hand << line.split(/ /)
+  hand << line.split(/ /)
 end
 
 file.close
