@@ -441,28 +441,28 @@ a = [
 y = 0
 
 # horizontal search
-for i in xrange(0, 380, 20):
+for i in range(0, 380, 20):
     for j in range(0, 16):
         x = a[i + j] * a[i + j + 1] * a[i + j + 2] * a[i + j + 3]
         if x > y:
             y = x
 
 # vertical search
-for i in xrange(0, 320, 20):
+for i in range(0, 320, 20):
     for j in range(0, 19):
         x = a[i + j] * a[i + j + 20] * a[i + j + 40] * a[i + j + 60]
         if x > y:
             y = x
 
 # diagonal top left to bottom right
-for i in xrange(0, 320, 20):
+for i in range(0, 320, 20):
     for j in range(0, 16):
         x = a[i + j] * a[i + j + 21] * a[i + j + 42] * a[i + j + 63]
         if x > y:
             y = x
 
 # diagonal top right to bottom left
-for i in xrange(0, 320, 20):
+for i in range(0, 320, 20):
     for j in range(3, 19):
         x = a[i + j] * a[i + j + 19] * a[i + j + 38] * a[i + j + 57]
         if x > y:

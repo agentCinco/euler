@@ -10,8 +10,4 @@
 
 import pyprimes
 
-x = pyprimes.primes()
-y = list(next(x) for i in range(1999999))
-z = sum(y)
-
-print(z)
+print(pyprimes.primesum(2000000))

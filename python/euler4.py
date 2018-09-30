@@ -8,12 +8,9 @@
 #
 # Find the largest palindrome made from the product of two 3-digit numbers.
 
-a = []
-
-for i in range(1, 999):
-    for j in range(1, 999):
+for i in range(999, 900, -1):
+    for j in range(999, 900, -1):
         x = i * j
         if str(x) == str(x)[::-1]:
-            a.append(x)
-
-print(max(a))
+            print(x, i, j)
+            exit()

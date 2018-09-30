@@ -5,6 +5,8 @@
 # problem 67
 #
 
+from functools import reduce
+
 t = [
     [59],
     [73, 41],

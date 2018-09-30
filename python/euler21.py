@@ -5,8 +5,9 @@
 # problem 21
 #
 
-n = 0
+from functools import reduce
 
+n = 0
 
 def factors(n):
     return set(
@@ -15,7 +16,6 @@ def factors(n):
             ([i, n // i] for i in range(1, int(n ** 0.5) + 1) if n % i == 0),
         )
     )
-
 
 for i in range(220, 10001):
     x = sum(factors(i)) - i

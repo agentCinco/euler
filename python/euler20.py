@@ -5,12 +5,11 @@
 # problem 20
 #
 
-import math
+from math import factorial
 
-n = math.factorial(100)
-x = 0
+answer = 0
 
-for i in str(n):
-    x += int(i)
+for i in str(factorial(100)):
+    answer += int(i)
 
-print(x)
+print(answer)

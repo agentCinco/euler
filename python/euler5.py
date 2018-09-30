@@ -9,6 +9,7 @@
 # What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 
 import pyprimes
+from functools import reduce
 
 limit = 20
 p = []
@@ -25,5 +26,5 @@ for i in p:
         while z < limit:
             z = z * i
             y.append(i)
-print(y)
+
 print(reduce(lambda a, b: a * b, y))

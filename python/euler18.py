@@ -15,6 +15,8 @@
 #
 # Assuming the path is obvious counting the previous step
 
+from functools import reduce
+
 t = [
     [75],
     [95, 64],

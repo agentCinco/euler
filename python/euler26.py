@@ -13,7 +13,6 @@ try:
 except:
     value = 1000
 
-
 def longest_recurring(n):
     for d in primes(n)[::-1]:
         p = 1

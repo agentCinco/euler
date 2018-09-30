@@ -5,14 +5,13 @@
 # problem 12
 #
 
-import pyprimes
+from pyprimesieve import primes
 
 n = 199
 Dn = 2
 cnt = 0
-x = pyprimes.primes()
 p = 1000
-primes = list(next(x) for i in range(p))
+prime = primes(p)
 
 while cnt < 500:
 
@@ -25,14 +24,14 @@ while cnt < 500:
     Dn1 = 1
 
     for i in range(p):
-        if primes[i] * primes[i] > n1:
+        if prime[i] * prime[i] > n1:
             Dn1 = Dn1 * 2
             break
 
         exp = 1
-        while n1 % primes[i] == 0:
+        while n1 % prime[i] == 0:
             exp = exp + 1
-            n1 = n1 / primes[i]
+            n1 = n1 / prime[i]
 
         if exp > 1:
             Dn1 = Dn1 * exp
@@ -43,6 +42,6 @@ while cnt < 500:
     cnt = Dn * Dn1
     Dn = Dn1
 
-ans = n * (n - 1) / 2
+ans = int(n * (n - 1) / 2)
 
 print(ans)

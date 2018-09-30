@@ -5,14 +5,13 @@
 # problem 19
 #
 
-import calendar
+from calendar import weekday
 
-year = 1901
-x = 0
+answer = 0
 
-for i in range(0, 99):
+for i in range(1901, 2000):
     for j in range(1, 13):
-        if calendar.weekday(year + i, j, 1) == 0:
-            x += 1
+        if weekday(i, j, 1) == 0:
+            answer += 1
 
-print x
+print(answer)
